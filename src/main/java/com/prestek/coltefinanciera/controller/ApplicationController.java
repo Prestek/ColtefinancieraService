@@ -3,7 +3,9 @@ package com.prestek.coltefinanciera.controller;
 import java.util.List;
 import java.util.Map;
 
-import com.prestek.coltefinanciera.request.CreateApplicationRequest;
+import com.prestek.FinancialEntityCore.dto.ApplicationDto;
+import com.prestek.FinancialEntityCore.model.Application.ApplicationStatus;
+import com.prestek.FinancialEntityCore.request.CreateApplicationRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,8 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prestek.coltefinanciera.dto.ApplicationDto;
-import com.prestek.coltefinanciera.model.Application.ApplicationStatus;
+
 import com.prestek.coltefinanciera.service.ApplicationService;
 
 import io.swagger.v3.oas.annotations.Operation;

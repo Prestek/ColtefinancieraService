@@ -5,14 +5,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
+@EntityScan(basePackages = {
+		"com.prestek.FinancialEntityCore.model",   // entidades del core (Application, etc.)
+		"com.prestek.Coltefinanciera.model"            // si tienes entidades locales
+})
 public class ColtefinancieraApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(ColtefinancieraApplication.class);
 
 	public static void main(String[] args) {
-		// Load environment variables from .env file only if not already set
+		// Load environment variables from .env.example file only if not already set
 		try {
 			Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
 			dotenv.entries().forEach(entry -> {
@@ -23,7 +28,7 @@ public class ColtefinancieraApplication {
 				System.setProperty(key, entry.getValue());
 			});
 		} catch (Exception e) {
-			// Continue without .env file
+			// Continue without .env.example file
 		}
 		SpringApplication.run(ColtefinancieraApplication.class, args);
 	}

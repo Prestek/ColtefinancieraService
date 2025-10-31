@@ -1,7 +1,9 @@
 package com.prestek.coltefinanciera.repository;
 
-import com.prestek.coltefinanciera.model.Application;
-import com.prestek.coltefinanciera.model.Application.ApplicationStatus;
+
+import com.prestek.FinancialEntityCore.model.Application;
+import com.prestek.FinancialEntityCore.model.Application.ApplicationStatus;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

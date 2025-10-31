@@ -1,9 +1,10 @@
 package com.prestek.coltefinanciera.controller;
 
 
-import com.prestek.coltefinanciera.service.AbstractWeightedQuoteService;
-import com.prestek.coltefinanciera.dto.QuoteDto;
-import com.prestek.coltefinanciera.request.QuoteRequest;
+import com.prestek.FinancialEntityCore.dto.QuoteDto;
+import com.prestek.FinancialEntityCore.request.QuoteRequest;
+import com.prestek.FinancialEntityCore.service.AbstractWeightedQuoteService;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

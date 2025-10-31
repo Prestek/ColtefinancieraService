@@ -1,9 +1,10 @@
 package com.prestek.coltefinanciera.service;
 
+import com.prestek.FinancialEntityCore.service.AbstractWeightedQuoteService;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ColtefinancieraQuoteService extends AbstractWeightedQuoteService {
+public class QuoteService extends AbstractWeightedQuoteService {
     @Override public String code() { return "COLTEFINANCIERA"; }
 
     @Override protected double wScore()  { return 0.45; }

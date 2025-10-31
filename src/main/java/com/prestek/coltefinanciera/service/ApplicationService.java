@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.prestek.FinancialEntityCore.dto.ApplicationDto;
+import com.prestek.FinancialEntityCore.model.Application;
+import com.prestek.FinancialEntityCore.model.Application.ApplicationStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.prestek.coltefinanciera.dto.ApplicationDto;
-import com.prestek.coltefinanciera.model.Application;
-import com.prestek.coltefinanciera.model.Application.ApplicationStatus;
 import com.prestek.coltefinanciera.repository.ApplicationRepository;
 //import com.prestek.coltefinanciera.repository.CreditOfferRepository;
 //import com.prestek.coltefinanciera.repository.UserRepository;
