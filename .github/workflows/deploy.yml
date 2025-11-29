@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    uses: Prestek/central-pipelines/.github/workflows/deploy.yml@V0.0.2
+    uses: Prestek/central-pipelines/.github/workflows/deploy.yml@V0.0.3
     with:
       PROJECT_NAME: "ColtefinancieraService"       # Nombre de la carpeta/proyecto en la instancia EC2
       IMAGE_NAME: "coltefinanciera-service"                  # Nombre de la imagen Docker
@@ -15,8 +15,9 @@ jobs:
       PORT: "8080"                        # Puerto en el que se expondrá el contenedor
       REPO_URL: "https://github.com/Prestek/ColtefinancieraService.git"  # URL del repositorio a desplegar
       BRANCH: "main"
+      AWS_REGION: "us-east-1"
     secrets:
-      EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY2 }}
+      EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
       EC2_HOST: ${{ secrets.EC2_HOST }}
       EC2_USER: ${{ secrets.EC2_USER }}
       AWS_SECRET_ARN: ${{ secrets.AWS_SECRET_ARN }}
