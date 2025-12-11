@@ -149,6 +149,13 @@
 						</goals>
 					</execution>
 					<execution>
+						<id>report-aggregate</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>report-aggregate</goal>
+						</goals>
+					</execution>
+					<execution>
 						<id>check</id>
 						<goals>
 							<goal>check</goal>
@@ -171,14 +178,17 @@
 				</executions>
 				<configuration>
 					<excludes>
-						<exclude>**/coltefinanciera/config/**</exclude>
-						<exclude>**/coltefinanciera/ColtefinancieraApplication.class</exclude>
-						<exclude>**/coltefinanciera/controller/HealthController.class</exclude>
+						<!-- Excluir clase principal de la aplicación -->
+						<exclude>**/ColtefinancieraApplication.class</exclude>
+						<!-- Excluir paquete de configuración -->
+						<exclude>**/config/**</exclude>
+						<!-- Excluir HealthController -->
+						<exclude>**/controller/HealthController.class</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
 
-			<!-- Maven Surefire Plugin for Running Tests -->
+			<!-- Surefire Plugin para ejecutar tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
